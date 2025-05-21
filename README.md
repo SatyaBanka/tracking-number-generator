@@ -48,28 +48,27 @@ git clone https://github.com/BankaSatya/tracking-number-generator.git
 cd tracking-number-generator/parcel-tracking
 ```
 
-
 ---
 
 ### 2. Run the app locly with Docker
 
 ```bash
 docker-compose up --build -d
-
+```
 ---
 
 ### 3. Apply migrations and create superuser (optional)
-In a new terminal:
+- In a new terminal:
 
 ```bash
 docker-compose exec web python manage.py migrate
 docker-compose exec web python manage.py createsuperuser
+```
 ---
 ### 4. API Swagger/OpenAPI documentation
 
+```web browser
 http://localhost:8000/docs/
-
-![image](https://github.com/user-attachments/assets/1af403e3-122e-4511-a23b-28c4ad0e661b)
-
-- Use API docs for testing API
+```
+- Use API docs for testing the API
 
