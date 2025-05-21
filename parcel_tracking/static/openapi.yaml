@@ -1,0 +1,70 @@
+openapi: 3.0.0
+info:
+  title: Parcel Tracking API
+  version: v1
+  description: API for generating unique tracking numbers for parcels.
+  contact:
+    name: Support
+    email: bankasatyanarayan30@gmail.com
+paths:
+  /next-tracking-number:
+    get:
+      summary: Generate a unique tracking number
+      parameters:
+        - name: origin_country_id
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Origin country code (ISO alpha-2)
+        - name: destination_country_id
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Destination country code (ISO alpha-2)
+        - name: weight
+          in: query
+          required: true
+          schema:
+            type: number
+          description: Weight in kilograms
+        - name: created_at
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date-time
+          description: Order creation timestamp (RFC 3339)
+        - name: customer_id
+          in: query
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: Customer UUID
+        - name: customer_name
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Customer name
+        - name: customer_slug
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Customer name in slug-case
+      responses:
+        '200':
+          description: A unique tracking number was generated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  tracking_number:
+                    type: string
+                  created_at:
+                    type: string
+                    format: date-time
