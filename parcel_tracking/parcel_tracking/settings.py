@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-mtb^nlw=cn+@yl^t(8m+45$mffoddei)=4)$mk-=2l=kt4=d-9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
