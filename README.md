@@ -1,12 +1,12 @@
-# Parcel Tracking Number Generator API
-# 📦 Use live Parcel Tracking Number Generator API
-
-http://ec2-13-49-243-244.eu-north-1.compute.amazonaws.com:8000/docs/
-
-# 📦 Tracking Number Generator API
+# 📦 Parcel Tracking Number Generator API
 
 A scalable Django REST API that generates **unique tracking numbers** for parcels based on request metadata.  
 It uses hash-based generation with constraints and is optimized for horizontal scaling.
+
+
+# 📦 Use live Parcel Tracking Number Generator API
+
+http://ec2-13-49-243-244.eu-north-1.compute.amazonaws.com:8000/docs/
 
 ---
 
@@ -46,6 +46,8 @@ Make sure you have the following installed:
 ```bash
 git clone https://github.com/BankaSatya/tracking-number-generator.git
 cd tracking-number-generator/parcel-tracking
+```
+
 
 ---
 
